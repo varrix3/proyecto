@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Routers de Red</title>
+    <link rel="stylesheet" href="css/styleD.css">
+    <script src="js/scriptD.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Routers de Red</h1>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#tipos">Tipos</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#aplicaciones">Aplicaciones</a>
+        <a href="#comparativas">Comparativas</a>
+        <a href="#configuracion">Configuración</a>
+        <a href="#novedades">Novedades</a>
+        <a href="index.html">Pagina Principal</a>
+
+    </nav>
+    <button id="toggleButton" onclick="myFunction()"><img id="icon" src="images/dark-icon.png"></button>
+    <section id="inicio">
+        <h2>Definición</h2>
+        <p>Un router es un dispositivo de hardware que sirve de punto de conexión entre una red local e internet;
+            funcionan como intermediarios entre los nodos de la red e internet público gestionando el tráfico web y 
+            dirigiendo los paquetes de datos a la dirección IP correspondiente entre los dispositivos de diferentes redes.</p>
+    </section>
+    <section id="tipos">
+        <h2>Tipos de Routers</h2>
+        <h3>Router Principal</h3>
+        <p>Un router principal o "core" es un enrutador designado para operar en las redes centrales de los 
+            proveedores de internet, siendo capaz de soportar múltiples interfaces de red, reenviar simúltaneamente paquetes IP 
+            a toda velocidad y hacer uso de los diferentes protocolos de enrutamiento que se utilizan dentro del núcleo.</p>
+        <img src="images/router_core.png" alt="Router Principal o Router Core" class="center">
+        <h3>Router Empresarial</h3>
+        <p>Un router empresarial o "enterprise" es un equipo de alto rendimiento optimizado en funciones y caracteristicas
+            para el sector de oficinas, negocios y empresas, de las cuales se mejoran aspectos como la seguridad (VPNs y firewalls),
+            la capacidad para múltiples usuarios, el rendimiento, la cobertura y la escalabilidad.</p>
+        <img src="images/enteprise_router.png" alt="Router Empresarial o Enterprise Router" class="center">
+        <h3>Router Inalámbrico</h3>
+        <p> Un router inalámbrico o "wireless" es un dispositivo que realiza las funciones de un enrutador, pero también incluye 
+        las funciones de un punto de acceso; su funcionamiento es básico, y normalmente sólo se usa para distribuir el
+        acceso a internet de manera inalámbrica a través del enlace principal del proveedor de servicios.</p>
+        <img src="images/wireless_router.png" alt="Router Inalambrico o Wireless Router" class="center">
+    </section>
+
+    <section id="funciones">
+        <h2>Funciones</h2>
+        <h3>Enrutamiento</h3>
+        <p>El enrutamiento o "routing" es la capacidad de buscar la ruta correcta para mover o transferir paquetes de información entre una o varias redes de internet;
+            usando tablas de enrutamiento, el equipo guarda un registro de las rutas que deben tomar los paquetes para llegar a cada destino del que sea responsable el enrutador.
+        </p>
+        <img src="images/ruteo.png" alt="Ruteo o Routing" class="center">
+        <h3>Segmentación de Redes</h3>
+        <p>La segmentación de redes es el proceso de dividir una red de computadoras en partes más pequeñas y aisladas, de forma que cada segmento pueda tener políticas de seguridad
+            diferentes que permitan controlar el flujo de tráfico entre los segmentos, protegiendo de esta manera tus sistemas contra el acceso no autorizado.</p>
+        <img src="images/segmentacion.png" alt="Router Empresarial o Enterprise Router" class="center">
+        <h3>Gestión de Calidad de Servicio</h3>
+        <p>La Calidad de Servicio o "Quality of Service" es el mecanismo que funciona dentro de una red para controlar el tráfico y garantizar el rendimiento de aplicaciones críticas con 
+            capacidad de red limitada, permitiendo a las organizaciones ajustar su tráfico de red general al priorizar aplicaciones específicas de alto rendimiento.</p>
+        <img src="images/qos.png" alt="Calidad de Servicio o QoS" class="center">
+    </section>
+
+    <section id="aplicaciones">
+        <h2>Aplicaciones</h2>
+        <h3>Provedores de servicios</h3>
+        <p>Dado que los routers principales proporcionan el máximo ancho de banda posible para conectar diferentes nodos dentro
+        de una gran red de área extensa, estos equipos son usados por proveedores de servicios masivos como AT&T, Verizon, Vodafone
+        o proveedores de la nube tal que Google, Amazon, Microsoft.</p>
+        <img src="images/service_provider.webp" alt="Proveedor de servicios" class="center">
+
+        <h3>Empresarial</h3>
+        <p>Por otra parte, los routers empresariales al poseer mejor calidad de hardware se les permite un mayor número de dispositivos
+        conectados y una mejor gestión de seguridad de red a través de protocolos, convirtiéndose en el equipo ideal para
+        entornos empresariales donde es imprescindible un rendimiento estable, seguro y rápido.</p>
+        <img src="images/enteprise_application.jpg" alt="Aplicación empresarial" class="center">
+
+        <h3>Residencial</h3>
+        <p>Los routers inalámbricos son comunes en las redes domésticas y de oficinas pequeñas, ya que la mayoría de los proveedores
+        de servicios proporcionan este tipo de dispositivos con funciones muy básicas para entornos de red sencillos en donde no se
+        presenten amenazas de red y carga de datos muy demandante.</p>
+        <img src="images/residential_application.jpg" alt="Aplicación residencial" class="center">
+    </section>
+
+    <section id="comparativas">
+        <h2>Comparativas</h2>
+        <table>
+            <caption>Routers</caption>
+            <tr>
+                <th></th>
+                <th>Inalámbricos</th>
+                <th>Empresariales</th>
+                <th>Principales</th>
+            </tr>
+            <tr>
+                <td>Usos</td>
+                <td>Redes domésticas y pequeñas oficinas.</td>
+                <td>Entornos empresariales con alta demanda de conectividad y seguridad.</td>
+                <td>Redes centrales de proveedores de servicios de internet (ISP)</td>
+            </tr>
+            <tr>
+                <td>Capacidad</td>
+                <td>Limitado a pocos dispositivos conectados simultáneamente.</td>
+                <td>Soporta un alto número de usuarios y conexiones simultáneas.</td>
+                <td>Maneja miles o millones de conexiones a alta velocidad.</td>
+            </tr>
+            <tr>
+                <td>Seguridad</td>
+                <td>Seguridad básica, generalmente con WPA/WPA2 y firewall básico.</td>
+                <td>Seguridad avanzada con soporte para VPNs, firewalls robustos y segmentación de red.</td>
+                <td>Seguridad de nivel operador con protección contra ataques de gran escala y redundancia.</td>
+            </tr>
+            <tr>
+                <td>Cobertura</td>
+                <td>Cobertura limitada, adecuada para entornos pequeños.</td>
+                <td>Mayor cobertura con tecnologías avanzadas para optimizar el rendimiento.</td>
+                <td>Máximo rendimiento y cobertura de ancho de banda para interconectar grandes redes.</td>
+            </tr>
+            <tr>
+                <td>Escalabilidad</td>
+                <td>No escalable, diseñado para redes pequeñas y simples.</td>
+                <td>Moderadamente escalable, permite la expansión en entornos empresariales.</td>
+                <td>Altamente escalable para manejar grandes volúmenes de tráfico.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="configuracion">
+        <h2>Configuración y tutoriales</h2>
+        <p>La instalación y configuración de tu router dependerá principalmente del fabricante de tu equipo;
+            existen equipos que son fáciles e intuitivos de manejar gracias a que poseen interfaces gráficas que facilitan la configuración, por otra parte,
+            se pueden encontrar  dispositivos los cuales se configuran únicamente bajo instrucciones dentro de una terminal de comandos,
+            no obstante, a continuación te proporcionaremos los enlaces a las principales fuentes de documentación de cada uno de los 
+            fabricantes de equipos de red más reconocidos dentro del mercado actual.
+        <ul>
+            <li><a href="https://www.cisco.com/c/es_mx/support/all-products.html">Cisco</a></li>
+            <li><a href="https://support.huawei.com/enterprise/mx/doc/index.html">Huawei</a></li>
+            <li><a href="https://arubanetworking.hpe.com/techdocs/ArubaDocPortal/content/docportal.htm">Aruba</a></li>
+            <li><a href="https://help.mikrotik.com/docs/spaces/ROS/pages/328059/RouterOS">Mikrotik</a></li>
+            <li><a href="https://help.ui.com/hc/en-us">Ubiquiti</a></li>
+            <li><a href="https://www.tp-link.com/us/configuration-guide/">TP-Link</a></li>
+        </ul>
+    </section>
+
+    <section id="novedades">
+        <h2>Novedades</h2>
+        <h3>Redes definidas por software</h3>
+        <p>Las redes definidas por software (Software Defined Networks o SDN) son un enfoque de la infraestructura de TI que aísla todos los recursos de red en un
+            sistema virtualizado donde el control de la red no sólo depende del hardware, sino que también será responsabilidad de una aplicación de software o una controladora.</p>
+        <img src="images/sdn.png" alt="Proveedor de servicios" class="center">
+
+        <h3>Inteligencia artificial aplicada</h3>
+        <p>La inteligencia artificial aplicada es la rama que saca a la IA del laboratorio y la lleva al mundo real, permitiendo a los ordenadores y a los
+             robots ejecutar tareas reales que ponen en práctica el aprendizaje automático, profundo y avanzado para el que están diseñados, proporcionando precisión y adaptación en sus tareas.</p>
+        <img src="images/ia-aplicada.jpg" alt="Aplicación empresarial" class="center">
+
+        <h3>5G+</h3>
+        <p>5G+ es la nueva ocurrencia con la que los operadores han bautizado a la última evolución del 5G que se pone a disposición de los usuarios,
+            llegando primero a España de la mano de Orange y cinco meses después siendo Movistar la siguiente en abrirlo comercialmente a sus clientes
+            de manera gratuita.</p>
+        <img src="images/5g-plus.jpg" alt="Aplicación residencial" class="center">
+    </section>
+
+    <footer>
+        <p>© 2025 Página de Routers de Red</p>
+    </footer>
+
+</body>
+</html>
