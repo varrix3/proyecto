@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Implementa el header*/
+.header{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content:center; /* Alinea la imagen completamente a la izquierda */
+    align-items: center; /* Centra verticalmente */  
+}
+.logo img{
+    object-fit: cover;
+    height: 50%;
+
+}
+.nav{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav a {
+    text-decoration: none;
+    padding: 0 30px;
+    font-size: 15px;
+    color: rgb(13, 13, 13);
+    transition: color 0.3s ease-in-out
+
+}
+
+.nav a:hover {
+    color: gold;
+}
+
+/*Seccion 1 */
+/*Seccion 1 */
+.section-1 {
+    background-image: url(img/Fondoprincipal.png);
+    width: 100%;
+    height: 94vh;
+    display: flex;
+    background-position: center 30%;
+    background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 60px;    
+}
+
+.section-1 a {
+    background: linear-gradient(to right, #9a9a9a, #5a5a5a);
+    padding: 20px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(241, 255, 240);
+    border-radius: 0.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-1 a:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #0d320e, #051105);
+    color: white;
+}
+
+.section-1 h1{
+    font-size:3.5em;
+    text-decoration: none;
+    color: white; 
+    
+}
+
+.section-1 p{
+    font-size: 20px;
+    color: white;
+    margin: 20px 0;
+}
+
+
+/*Seccion 2*/
+.section-2{
+    background-image: url(img/Fondo_medio.jpg);
+    background-position: center;
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    margin-bottom: 30px;
+}
+
+.section-2 p{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+/*Seccion 3*/
+.section-3{
+    background-color:#fafff9;
+    background-position: center;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto{
+    width: 25%;
+    height: 80%;
+    margin: 0 1%;
+    border: 1px solid rgb(8, 8, 8);
+}
+.img{
+    width: 100%;
+    height: 40%;
+    background-color: #cf2020;
+    overflow: hidden;
+}
+.img img{
+
+    object-fit: cover;
+    width: 100%;
+}
+
+.textos {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea todo en el centro verticalmente */
+    align-items: center;
+    padding: 30px 20px;
+}
+
+textos h3{
+    font-size: 25px;
+}
+
+.textos p{
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.textos a {
+    display: inline-block; /* Permite personalizar mejor el tamaño */
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    background-color: #1cf508;
+    border: 2px solid rgb(8, 8, 8); /* Borde negro */
+    transition: all 0.3s ease-in-out;
+}
+
+.textos a:hover {
+    background-color: #148c04;
+    border-color: #0a6503; /* Cambia el color del borde en hover */
+    transform: scale(1.1);
+}
+
+
+/*footer*/
+
+.footer{
+    background-color: #fafffaf0;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-pie{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e2e0a;
+}
+.logo-pie img{
+    object-fit: cover;
+    height: 150px;
+}
+
+.textos-pie{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e2e0a;
+}
+
+.piederecho{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #f0f3f0;
+}
+
+.piederecho a{
+    color: #f7fff6;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 10px;
+}
+
+.pieizquierdo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafff9;
+}
+
