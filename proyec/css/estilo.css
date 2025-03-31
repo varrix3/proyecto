@@ -57,7 +57,7 @@ body {
 /*Seccion 1 */
 /*Seccion 1 */
 .section-1 {
-    background-image: url(img/Fondoprincipal.png);
+    background-image: url(images/Fondoprincipal.png);
     width: 100%;
     height: 94vh;
     display: flex;
@@ -103,7 +103,7 @@ body {
 
 /*Seccion 2*/
 .section-2{
-    background-image: url(img/Fondo_medio.jpg);
+    background-image: url(images/Fondo_medio.jpg);
     background-position: center;
     width: 100%;
     height: 18vh;
