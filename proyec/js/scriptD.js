@@ -9,4 +9,14 @@ function myFunction() {
         icon.src = "images/dark-icon.png";
         icon.alt = "Modo nocturno";
     }
+
+    let logo = document.getElementById("logo");
+    if (logo.src.includes("logo2.png")) {
+        logo.src = "images/logo2-black.png";
+        logo.alt = "Logo diurno"
+    } else {
+        logo.src = "images/logo2.png"
+        logo.alt = "Logo nocturno"
+    }
   }
+
