@@ -7,12 +7,53 @@
     src: url("../fonts/Open Sans-Regular.ttf");
 }
 
-body { font-family: poppins; margin: 0; padding: 0; }
-header { background: #06521c; color: white; padding: 5px; text-align: center;}
-nav { background: white; padding-top: 2rem; padding-bottom: 2rem; text-align: center;}
-nav a { font-weight: 500; color: black; text-decoration: none; margin: 0 15px; }
-nav a:hover {color: #df9911;}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; 
+  }
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background: white;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 2rem; 
+    padding-right: 2rem; 
+    position: fixed; 
+    top: 0; 
+    width: 98%; 
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; 
+}
+
+nav a {
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+#toggleButton {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+
+nav a:hover {color: #df9911;} 
 nav a[href="#inicio"] {color: #df9911}
+header { background: #06521c; color: white; padding: 5px; text-align: center; margin-top: 135px;}
+body { font-family: poppins; margin: 0; padding: 0; }
 section { padding: 20px; max-width: 800px; margin: auto; }
 footer { background: #06521c; color: white; text-align: center; padding: 10px; margin-top: 20px; }
 table {border-collapse: collapse;}
@@ -21,15 +62,6 @@ caption {padding: 8px; font-weight:normal;}
 .center {display: block; margin-left: auto; margin-right: auto; width: 50%;}
 .dark-mode {background-color: black; color: white; border: 1px solid white;}
 .dark-mode th, .dark-mode td {border: 1px solid white;}
-.dark-mode nav { background: black; padding-top: 2rem; padding-bottom: 2rem; text-align: center; }
-.dark-mode nav a { color: white; text-decoration: none; margin: 0 15px; }
+.dark-mode nav {display: flex; justify-content: space-between; align-items: center; background: black; padding-top: .5rem; padding-bottom: .5rem; padding-left: 2rem; padding-right: 2rem;}
+.dark-mode nav a {color: white; text-decoration: none; margin: 0 15px;}
 .dark-mode nav a:hover {color: #df9911;}
-button {
-    float: right;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-}
