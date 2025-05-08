@@ -12,8 +12,9 @@
 
     <nav>
         <img id="logo" src="images/logo2.png" height="120" width="120"> 
-        <div id="nav-links">
-            <a href="index.html">Inicio</a>
+        <div id="nav-container">
+          <div id="nav-links"> 
+            <a href="index.html">Inicio</a> 
             <a href="#definicion">Definicion</a>
             <a href="#tipos">Tipos</a>
             <a href="#funciones">Funciones</a>
@@ -21,9 +22,12 @@
             <a href="#comparativas">Comparativas</a>
             <a href="#configuracion">Configuración</a>
             <a href="#novedades">Novedades</a>
+          </div>
         </div>
-        <button id="toggleButton" onclick="myFunction()"><img id="icon" src="images/dark-icon.png"></button>  
-    </nav>
+        <button id="toggleButton" onclick="myFunction()"> 
+          <img id="icon" src="images/dark-icon.png">
+        </button>  
+      </nav>
     
     <header>
         <h1>Routers de Red</h1>
@@ -94,46 +98,51 @@
 
     <section id="comparativas">
         <h2>Comparativas</h2>
-        <table>
-            <caption>Routers</caption>
+        <table class="responsive-table">
+          <caption>Routers</caption>
+          <thead>
             <tr>
-                <th></th>
-                <th>Inalámbricos</th>
-                <th>Empresariales</th>
-                <th>Principales</th>
+              <th></th>
+              <th>Inalámbricos</th>
+              <th>Empresariales</th>
+              <th>Principales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Usos</td>
+              <td data-label="Inalámbricos">Redes domésticas y pequeñas oficinas.</td>
+              <td data-label="Empresariales">Entornos empresariales con alta demanda de conectividad y seguridad.</td>
+              <td data-label="Principales">Redes centrales de proveedores de servicios de internet (ISP)</td>
             </tr>
             <tr>
-                <td>Usos</td>
-                <td>Redes domésticas y pequeñas oficinas.</td>
-                <td>Entornos empresariales con alta demanda de conectividad y seguridad.</td>
-                <td>Redes centrales de proveedores de servicios de internet (ISP)</td>
+              <td>Capacidad</td>
+              <td data-label="Inalámbricos">Limitado a pocos dispositivos conectados simultáneamente.</td>
+              <td data-label="Empresariales">Soporta un alto número de usuarios y conexiones simultáneas.</td>
+              <td data-label="Principales">Maneja miles o millones de conexiones a alta velocidad.</td>
             </tr>
             <tr>
-                <td>Capacidad</td>
-                <td>Limitado a pocos dispositivos conectados simultáneamente.</td>
-                <td>Soporta un alto número de usuarios y conexiones simultáneas.</td>
-                <td>Maneja miles o millones de conexiones a alta velocidad.</td>
+              <td>Seguridad</td>
+              <td data-label="Inalámbricos">Seguridad básica, generalmente con WPA/WPA2 y firewall básico.</td>
+              <td data-label="Empresariales">Seguridad avanzada con soporte para VPNs, firewalls robustos y segmentación de red.</td>
+              <td data-label="Principales">Seguridad de nivel operador con protección contra ataques de gran escala y redundancia.</td>
             </tr>
             <tr>
-                <td>Seguridad</td>
-                <td>Seguridad básica, generalmente con WPA/WPA2 y firewall básico.</td>
-                <td>Seguridad avanzada con soporte para VPNs, firewalls robustos y segmentación de red.</td>
-                <td>Seguridad de nivel operador con protección contra ataques de gran escala y redundancia.</td>
+              <td>Cobertura</td>
+              <td data-label="Inalámbricos">Cobertura limitada, adecuada para entornos pequeños.</td>
+              <td data-label="Empresariales">Mayor cobertura con tecnologías avanzadas para optimizar el rendimiento.</td>
+              <td data-label="Principales">Máximo rendimiento y cobertura de ancho de banda para interconectar grandes redes.</td>
             </tr>
             <tr>
-                <td>Cobertura</td>
-                <td>Cobertura limitada, adecuada para entornos pequeños.</td>
-                <td>Mayor cobertura con tecnologías avanzadas para optimizar el rendimiento.</td>
-                <td>Máximo rendimiento y cobertura de ancho de banda para interconectar grandes redes.</td>
+              <td>Escalabilidad</td>
+              <td data-label="Inalámbricos">No escalable, diseñado para redes pequeñas y simples.</td>
+              <td data-label="Empresariales">Moderadamente escalable, permite la expansión en entornos empresariales.</td>
+              <td data-label="Principales">Altamente escalable para manejar grandes volúmenes de tráfico.</td>
             </tr>
-            <tr>
-                <td>Escalabilidad</td>
-                <td>No escalable, diseñado para redes pequeñas y simples.</td>
-                <td>Moderadamente escalable, permite la expansión en entornos empresariales.</td>
-                <td>Altamente escalable para manejar grandes volúmenes de tráfico.</td>
-            </tr>
+          </tbody>
         </table>
-    </section>
+      </section>
+      
 
     <section id="configuracion">
         <h2>Configuración y tutoriales</h2>
