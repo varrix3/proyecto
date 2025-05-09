@@ -1,4 +1,5 @@
 
+/* Importación de fuentes desde Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @font-face {
@@ -7,12 +8,13 @@
     src: url("../fonts/Open Sans-Regular.ttf");
 }
 
-
+/* Define un comportamiento de scroll suave en toda la página */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px; 
   }
 
+/* Establece estilos para la barra de navegación fija INTENTAR RESOLVER*/
 nav {
     display: flex;
     justify-content: space-between; 
@@ -28,18 +30,21 @@ nav {
     z-index: 1000
 }
 
+/* Establece que el contenedor de enlaces de navegación se distribuya de manera horizontal y centrada */
 .nav-links {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1; 
+    display: flex; /* Utiliza flexbox para alinear los elementos en línea */
+    justify-content: center; /* Centra los enlaces horizontalmente dentro del contenedor */
+    flex-grow: 1; /* Permite que este contenedor crezca y ocupe el espacio disponible */
 }
 
+/* Define estilos generales para todos los enlaces dentro del elemento <nav> */
 nav a {
     font-weight: 500;
     color: black;
     text-decoration: none;
     margin: 0 15px;
 }
+
 
 #toggleButton {
     background-color: transparent;
@@ -50,9 +55,7 @@ nav a {
     outline: none;
 }
 
-
-nav a:hover {color: #df9911;} 
-nav a[href="#inicio"] {color: #df9911}
+nav a:hover {color: #df9911;}  /* Cambia el color del enlace al pasar el mouse */
 header { background: #06521c; color: white; padding: 5px; text-align: center; margin-top: 135px;}
 body { font-family: poppins; margin: 0; padding: 0; }
 section { padding: 20px; max-width: 800px; margin: auto; }
@@ -61,55 +64,58 @@ table {border-collapse: collapse;}
 th, td {border: 1px solid black; padding: 8px; font-weight: normal;}
 caption {padding: 8px; font-weight:normal;} 
 .center {display: block; margin-left: auto; margin-right: auto; width: 50%;}
+
+/* Estilos alternativos para el modo oscuro */
 .dark-mode {background-color: black; color: white; border: 1px solid white;}
 .dark-mode th, .dark-mode td {border: 1px solid white;}
 .dark-mode nav {display: flex; justify-content: space-between; align-items: center; background: black; padding-top: .5rem; padding-bottom: .5rem; padding-left: 2rem; padding-right: 2rem;}
 .dark-mode nav a {color: white; text-decoration: none; margin: 0 15px;}
 .dark-mode nav a:hover {color: #df9911;}
 
-
+/* Contenedor con la estructura principal del menú desplegable (contiene tanto el botón como el menú con los enlaces de navegación ) */
 .dropdown {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Posiciona el menú en relación a este contenedor */
+    display: inline-block; /* Permite que el botón se acomode en línea y respete su tamaño */
   }
 
+/* Botón que despliega el menú */
   .dropdown-btn {
     background-color: black;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
+    padding: 10px 20px; /* Espaciado interno para mejor área clicable */
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 8px; /* Agrega bordes redondeados en su lugar */
+    cursor: pointer; /* Cambia el estilo del cursor al pasar por encima del botón */
+    font-size: 16px; 
   }
 
-  .dropdown-content { /* menu contenedor */
-    display: none;
-    position: absolute;
+  /* Menú que aparece al hacer clic en el botón */
+  .dropdown-content { 
+    display: none; /* Oculto por defecto hasta que se active desde JavaScript */
+    position: absolute; /* Posicionado en relación al contenedor padre (.dropdown) */
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
+    min-width: 160px; /* Ancho mínimo para evitar que se vea demasiado estrecho */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra que da un efecto flotante */
+    border-radius: 8px; /* Bordes redondeados para mantener consistencia visual */
+    z-index: 1; /* Asegura que el menú se muestre por encima de otros elementos */
+    left: 50%; /* Posiciona el menú en el centro horizontal del botón */
+    transform: translateX(-50%); /* Ajusta la posición para centrar el menú completamente */
   }
 
+  /* Estilos de enlace dentro del menú desplegable */
   .dropdown-content a {
     color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-bottom: 1px solid #eee;
+    padding: 12px 16px; /* Espaciado interno para interacción táctil o con mouse */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: block; 
+    border-bottom: 1px solid #eee; /* Línea divisora entre elementos */
   }
 
+  /* Crea un efecto al pasar el cursor sobre un enlace del menú */
   .dropdown-content a:hover {
     background-color: #f1f1f1;
   }
 
-  .show {
-    display: block;
-  }
 
 
 /* Estilos generales de tabla */
@@ -127,34 +133,36 @@ caption {
   margin-bottom: 8px;
 }
 
-/* Estilos responsivos */
+/* Estilos responsivos en la tabla para pantallas con un ancho máximo de 768px (tabletas y móviles) */
 @media (max-width: 768px) {
+  /* Oculta la cabecera de la tabla para mejorar la legibilidad en dispositivos pequeños */
   .responsive-table thead {
     display: none;
   }
-
+/* Cada fila (<tr>) se comporta como un contenedor que agrupa celdas apiladas */
   .responsive-table tr {
-    display: block;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    padding: 10px;
+    display: block; /* Cambia el comportamiento de fila a contenedor vertical */
+    margin-bottom: 1rem;  /* Espaciado entre cada contenedor para separación visual */
+    border: 1px solid #ddd; /* Borde visible para distinguir cada contenedor */
+    padding: 10px; /* Espaciado interno para que no esté pegado el contenido al borde */
   }
-
+ /* Cada celda (<td>) se convierte en un bloque apilado dentro del contenedor (<tr>) */
   .responsive-table td {
-    display: block;
-    text-align: right;
-    position: relative;
-    padding-left: 50%;
+    display: block; /* Hace que las celdas se apilen una debajo de otra */
+    text-align: right; /* El texto se alinea a la derecha por estilo */
+    position: relative; /* Necesario para posicionar correctamente el pseudoelemento ::before */
+    padding-left: 50%;  /* Deja espacio en la parte izquierda para mostrar el encabezado simulado */
   }
 
+  /* Muestra el nombre del encabezado antes del contenido de la celda */
   .responsive-table td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 10px;
-    width: 45%;
-    padding-right: 10px;
-    font-weight: bold;
-    text-align: left;
-    white-space: nowrap;
+    content: attr(data-label); /* Usa el valor del atributo data-label en el archivo HTML como texto simulado del encabezado */
+    position: absolute; /* Posiciona el encabezado simulado dentro de la celda */
+    left: 10px; /* Posiciona el texto del encabezado simulado a 10px del borde izquierdo de la celda */
+    width: 45%; /* Define cuánto espacio ocupará el encabezado simulado dentro de la celda (casi la mitad, para que el encabezado y el contenido no se encimen) */
+    padding-right: 10px; /* Espacio entre el encabezado y el contenido de la celda */
+    font-weight: bold; /* El encabezado simulado aparece en negrita */
+    text-align: left;  /* Se alinea a la izquierda para parecerse al formato original de tabla */
+    white-space: nowrap; /* Evita que el encabezado se divida en varias líneas */
   }
 }
