@@ -21,7 +21,7 @@ function myFunction() {
     }
   }
 
-/* Script de navegación responsivo que alterna entre un menú horizontal y un menú desplegable (que se activa mediante un botón)
+/* Script de navegación responsiva que alterna entre un menú horizontal y un menú desplegable (que se activa mediante un botón)
 según el ancho de la ventana del navegador, se ejecuta automáticamente cuando el DOM se ha cargado completamente*/
 
   document.addEventListener("DOMContentLoaded", () => { //Espera a que el contenido HTML esté completamente cargado antes de ejecutar el codigo 
