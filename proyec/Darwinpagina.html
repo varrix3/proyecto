@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Routers de Red</title>
-    <link rel="stylesheet" href="css/styleD.css">
-    <script src="js/scriptD.js"></script>
+    <link rel="stylesheet" href="css/styleD.css"> <!-- Enlace al archivo CSS externo -->
+    <script src="js/scriptD.js"></script>  <!-- Enlace al script JS externo -->
 </head>
 <body>
 
+<!-- Barra de navegación fija con el logo de la página, diferentes enlaces y botón de modo oscuro -->
     <nav>
+        <!-- Logo de la página -->
         <img id="logo" src="images/logo2.png" height="120" width="120"> 
         <div id="nav-container">
-          <div id="nav-links"> 
-            <a href="index.html">Inicio</a> 
-            <a href="#definicion">Definicion</a>
-            <a href="#tipos">Tipos</a>
+        <!-- Enlaces que permiten navegar a las secciones de la misma página -->
+          <div id="nav-links"> <!-- Los hipervínculos están disfrazados como botones, al hacerles click, te dirigirán a la referencia establecida -->
+            <a href="index.html">Inicio</a> <!-- En este caso, la referencia te dirige a la página principal "index.html", que se muestra como un botón de "Inicio" -->
+            <a href="#definicion">Definicion</a> <!-- En este otro ejemplo, se está haciendo referencia a las diferentes secciones de la página establecidas por un id -->
+            <a href="#tipos">Tipos</a> <!-- por lo que, al hacerles click, el navegador te moverá automaticamente a la sección establecida en la referencia del hipervínculo correspondiente -->
             <a href="#funciones">Funciones</a>
             <a href="#aplicaciones">Aplicaciones</a>
             <a href="#comparativas">Comparativas</a>
@@ -24,22 +27,26 @@
             <a href="#novedades">Novedades</a>
           </div>
         </div>
+        <!-- Botón para alternar el modo oscuro -->
         <button id="toggleButton" onclick="myFunction()"> 
           <img id="icon" src="images/dark-icon.png">
         </button>  
       </nav>
     
+    <!-- Encabezado principal -->
     <header>
         <h1>Routers de Red</h1>
     </header>
 
-    <section id="definicion">
+    <!-- Secciones de contenido temático definidos por ids para la navegación a través de hipervínculos -->
+
+    <section id="definicion"> <!-- Definición básica de router -->
         <h2>Definición</h2>
         <p>Un router es un dispositivo de hardware que sirve de punto de conexión entre una red local e internet;
             funcionan como intermediarios entre los nodos de la red e internet público gestionando el tráfico web y 
             dirigiendo los paquetes de datos a la dirección IP correspondiente entre los dispositivos de diferentes redes.</p>
     </section>
-    <section id="tipos">
+    <section id="tipos"> <!-- Tipos de routers con imágenes -->
         <h2>Tipos de Routers</h2>
         <h3>Router Principal</h3>
         <p>Un router principal o "core" es un enrutador designado para operar en las redes centrales de los 
@@ -58,7 +65,7 @@
         <img src="images/wireless_router.png" alt="Router Inalambrico o Wireless Router" class="center">
     </section>
 
-    <section id="funciones">
+    <section id="funciones"> <!-- Funciones clave de los tipos de router -->
         <h2>Funciones</h2>
         <h3>Enrutamiento</h3>
         <p>El enrutamiento o "routing" es la capacidad de buscar la ruta correcta para mover o transferir paquetes de información entre una o varias redes de internet;
@@ -75,7 +82,7 @@
         <img src="images/qos.png" alt="Calidad de Servicio o QoS" class="center">
     </section>
 
-    <section id="aplicaciones">
+    <section id="aplicaciones"> <!-- Aplicaciones según el tipo de router -->
         <h2>Aplicaciones</h2>
         <h3>Provedores de servicios</h3>
         <p>Dado que los routers principales proporcionan el máximo ancho de banda posible para conectar diferentes nodos dentro
@@ -96,7 +103,7 @@
         <img src="images/residential_application.jpg" alt="Aplicación residencial" class="center">
     </section>
 
-    <section id="comparativas">
+    <section id="comparativas"> <!-- Tabla comparativa entre los tipos de router -->
         <h2>Comparativas</h2>
         <table class="responsive-table">
           <caption>Routers</caption>
@@ -144,7 +151,7 @@
       </section>
       
 
-    <section id="configuracion">
+    <section id="configuracion"> <!-- Enlaces a documentación oficial -->
         <h2>Configuración y tutoriales</h2>
         <p>La instalación y configuración de tu router dependerá principalmente del fabricante de tu equipo;
             existen equipos que son fáciles e intuitivos de manejar gracias a que poseen interfaces gráficas que facilitan la configuración, por otra parte,
@@ -161,7 +168,7 @@
         </ul>
     </section>
 
-    <section id="novedades">
+    <section id="novedades"> <!-- Tendencias en redes y telecomunicaciones en general -->
         <h2>Novedades</h2>
         <h3>Redes definidas por software</h3>
         <p>Las redes definidas por software (Software Defined Networks o SDN) son un enfoque de la infraestructura de TI que aísla todos los recursos de red en un
