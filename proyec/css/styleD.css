@@ -10,31 +10,32 @@
 
 /* Define un comportamiento de scroll suave en toda la página */
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px; 
+    scroll-behavior: smooth; /* Hace que el desplazamiento hacia las secciones sea animado y fluido en lugar de inmediato. */
+    scroll-padding-top: 100px; /* Agrega un espacio superior de 100 píxeles al desplazarse hacia una sección,
+    útil para evitar que la sección quede oculta detrás de un encabezado fijo como el <nav>. */
   }
 
-/* Establece estilos para la barra de navegación fija INTENTAR RESOLVER*/
+/* Establece estilos para la barra de navegación fija */
 nav {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    background: white;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    padding-left: 2rem; 
-    padding-right: 2rem; 
-    position: fixed; 
-    top: 0; 
-    width: 98%; 
-    z-index: 1000
+    display: flex; /* Utiliza el modelo Flexbox para alinear y distribuir los elementos hijos (logo, barra de navegación, botón) en una fila. */
+    justify-content: space-between; /* Distribuye los elementos hijos a lo largo del eje horizontal con el mayor espacio posible entre ellos. */
+    align-items: center; /* Alinea verticalmente todos los elementos hijos al centro dentro del contenedor */
+    background: white; /* Define el blanco como color de fondo */
+    padding-top: .5rem; /* Agrega un espaciado interno (padding) en la parte superior de 0.5 unidades relativas a la raíz (rem). */
+    padding-bottom: .5rem; /* Añade el mismo espaciado en la parte inferior. */
+    padding-left: 1rem; /* Agrega un espaciado interno en el lado izquierdo de 1 rem para separar el contenido del borde. */
+    padding-right: 1rem; /* Añade el mismo espaciado a la derecha para simetría. */
+    top: 0;  /* Posiciona la barra de navegación en la parte más alta de la ventana del navegador (0 píxeles desde arriba). */
+    position: fixed; /* Fija la barra de navegación en la parte superior de la pantalla incluso al hacer scroll. */
+    width: 99%; /* Define que la barra ocupará el 99% del ancho total de la ventana. */
+    z-index: 1000 /* Coloca la barra en un nivel superior respecto a otros elementos para que siempre quede visible. */
 }
 
 /* Establece que el contenedor de enlaces de navegación se distribuya de manera horizontal y centrada */
 .nav-links {
-    display: flex; /* Utiliza flexbox para alinear los elementos en línea */
+    display: flex; 
     justify-content: center; /* Centra los enlaces horizontalmente dentro del contenedor */
-    flex-grow: 1; /* Permite que este contenedor crezca y ocupe el espacio disponible */
+    flex-grow: 1; /* Permite que este contenedor crezca y ocupe todo el espacio disponible dentro de <nav> */
 }
 
 /* Define estilos generales para todos los enlaces dentro del elemento <nav> */
@@ -47,16 +48,16 @@ nav a {
 
 
 #toggleButton {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
+    background-color: transparent;  /* Elimina cualquier color de fondo visible, haciendo que el fondo del botón sea completamente transparente */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo (si la hubiera) se repita dentro del botón */
+    border: none; /* Elimina cualquier borde que el navegador pudiera aplicar por defecto al botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima, indicando que es un elemento interactivo (clickeable) */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del área del botón. */
+    outline: none; /* Elimina el contorno que aparece al interactuar el botón, para un diseño más limpio. */
 }
 
 nav a:hover {color: #df9911;}  /* Cambia el color del enlace al pasar el mouse */
-header { background: #06521c; color: white; padding: 5px; text-align: center; margin-top: 135px;}
+header { background: #06521c; color: white; padding: 5px; text-align: center; margin-top: 100px;}
 body { font-family: poppins; margin: 0; padding: 0; }
 section { padding: 20px; max-width: 800px; margin: auto; }
 footer { background: #06521c; color: white; text-align: center; padding: 10px; margin-top: 20px; }
@@ -68,9 +69,29 @@ caption {padding: 8px; font-weight:normal;}
 /* Estilos alternativos para el modo oscuro */
 .dark-mode {background-color: black; color: white; border: 1px solid white;}
 .dark-mode th, .dark-mode td {border: 1px solid white;}
-.dark-mode nav {display: flex; justify-content: space-between; align-items: center; background: black; padding-top: .5rem; padding-bottom: .5rem; padding-left: 2rem; padding-right: 2rem;}
+.dark-mode nav {display: flex; justify-content: space-between; align-items: center; background: black; padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem;}
 .dark-mode nav a {color: white; text-decoration: none; margin: 0 15px;}
 .dark-mode nav a:hover {color: #df9911;}
+
+/* Estilos para el dropdown en modo oscuro */
+.dark-mode .dropdown-btn {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode .dropdown-content {
+  background-color: #333;
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .dropdown-content a {
+  color: white;
+  border-bottom: 1px solid #555;
+}
+
+.dark-mode .dropdown-content a:hover {
+  background-color: #444;
+}
 
 /* Contenedor con la estructura principal del menú desplegable (contiene tanto el botón como el menú con los enlaces de navegación ) */
 .dropdown {
@@ -85,7 +106,7 @@ caption {padding: 8px; font-weight:normal;}
     padding: 10px 20px; /* Espaciado interno para mejor área clicable */
     border: none; /* Elimina el borde por defecto */
     border-radius: 8px; /* Agrega bordes redondeados en su lugar */
-    cursor: pointer; /* Cambia el estilo del cursor al pasar por encima del botón */
+    cursor: pointer; 
     font-size: 16px; 
   }
 
@@ -115,7 +136,6 @@ caption {padding: 8px; font-weight:normal;}
   .dropdown-content a:hover {
     background-color: #f1f1f1;
   }
-
 
 
 /* Estilos generales de tabla */
