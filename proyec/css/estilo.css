@@ -2,22 +2,35 @@
 
 body {
     font-family: 'Playfair Display', serif;
+    padding-top: 10vh;
 }
+
+html {
+    scroll-padding-top: 10vh;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 /*Implementa el header*/
 .header{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 253, 253);
     width: 100%;
     height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    position: fixed; /* Fija el header en la ventana del navegador */
+    top: 0;          /* Lo pega a la parte superior */
+    left: 0;         /* Lo pega a la parte izquierda */
+    z-index: 1000;   /* Asegura que esté por encima de otro contenido */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 .logo{
     
@@ -37,8 +50,40 @@ body {
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center; 
     align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    margin-right: 20px;
+}
+
+/* En esta parte esta la seccion para que el menu sea responsible en el telefono*/
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+    }
+
+    .nav a {
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav.active {
+        display: flex;
+    }
 }
 .nav a {
     text-decoration: none;
@@ -54,14 +99,11 @@ body {
 }
 
 /*Seccion 1 */
-/*Seccion 1 */
 .section-1 {
-    background-image: url(images/Fondoprincipal.png);
     width: 100%;
     height: 94vh;
     display: flex;
     background-position: center 30%;
-    background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     flex-direction: column;
     justify-content: center;
@@ -70,6 +112,15 @@ body {
     margin-bottom: 60px;    
 }
 
+.section-1 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Esto la manda al fondo */
+}
 .section-1 a {
     background: linear-gradient(to right, #9a9a9a, #5a5a5a);
     padding: 20px 30px;
@@ -82,7 +133,7 @@ body {
 
 .section-1 a:hover {
     transform: scale(1.1);
-    background: linear-gradient(to right, #0d320e, #051105);
+    background: linear-gradient(to right, #0d400f, #051105);
     color: white;
 }
 
@@ -102,7 +153,7 @@ body {
 
 /*Seccion 2*/
 .section-2{
-    background-image: url(images/Fondo_medio.jpg);
+    background: linear-gradient(to bottom, #094c23, #191c1e, #0b5303); 
     background-position: center;
     width: 100%;
     height: 18vh;
@@ -114,6 +165,7 @@ body {
     margin-bottom: 30px;
 }
 
+
 .section-2 p{
     color: #ffffff;
     font-size: 20px;
@@ -124,7 +176,7 @@ body {
     background-color:#fafff9;
     background-position: center;
     width: 100%;
-    height: 82vh;
+    height: 110vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -135,12 +187,10 @@ body {
     width: 25%;
     height: 80%;
     margin: 0 1%;
-    border: 1px solid rgb(8, 8, 8);
 }
 .img{
     width: 100%;
     height: 40%;
-    background-color: #cf2020;
     overflow: hidden;
 }
 .img img{
@@ -154,7 +204,7 @@ body {
     height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinea todo en el centro verticalmente */
+    justify-content: flex-start;
     align-items: center;
     padding: 30px 20px;
 }
@@ -166,27 +216,221 @@ textos h3{
 .textos p{
     font-size: 15px;
     margin: 20px 0;
+
 }
 
 .textos a {
-    display: inline-block; /* Permite personalizar mejor el tamaño */
+    display: inline-block;
     padding: 15px 30px;
     font-size: 18px;
     text-decoration: none;
     color: white;
-    background-color: #1cf508;
-    border: 2px solid rgb(8, 8, 8); /* Borde negro */
-    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, #7e7e7e, #4a4a4a); /* Degradado gris elegante */
+    border: none;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .textos a:hover {
-    background-color: #148c04;
-    border-color: #0a6503; /* Cambia el color del borde en hover */
     transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(128, 128, 128, 0.6); /* Luz gris suave */
+    background: linear-gradient(135deg, #4a4a4a, #7e7e7e); /* Cambia el degradado al revés */
+    color: #ffffff;
 }
 
 
+/* Esta seccion se modifica las fotos que se va a poner en las secciones de contenido que ingresan al menu */
+
+.content-container .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra sutil para la imagen */
+}
+
+.content-container .image-container .caption {
+    font-size: 0.85em;
+    color: #555;
+    text-align: center;
+    margin-top: 0.5em;
+    font-style: italic;
+    font-family: 'Arial', sans-serif; /* Para el caption es mejor sans-serif */
+}
+
+.content-container {
+     /* Ancho máximo del contenido para buena lectura */
+    margin: 0 auto;   /* Centrar el contenedor */
+    background-color: #ffffff; /* Fondo blanco para el texto dentro del contenedor */
+    padding: 30px 40px; /* Espacio interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(4, 30, 7, 0.1); /* Sombra sutil */
+}
+
+.content-container h2 {
+    font-size: 2.2em; /* Tamaño del subtítulo */
+    color: #094c23; /* Verde oscuro de tu tema */
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    font-weight: 700; /* Peso de la fuente Playfair Display */
+}
+
+.content-container p {
+    font-size: 1em; /* Tamaño de párrafo (ajusta si es necesario) */
+    line-height: 1.7; /* Espaciado entre líneas */
+    margin-bottom: 1.5em; /* Espacio después del párrafo */
+    color: #333; /* Color de texto principal */
+    /* Si quieres usar Playfair Display aquí también, asegúrate que esté cargado */
+    /* font-family: 'Playfair Display', serif; */
+     /* O considera una fuente sans-serif para bloques largos de texto para mejor legibilidad */
+     font-family: 'Arial', sans-serif; /* Ejemplo con Arial */
+    text-align: justify;
+}
+
+.content-container ul {
+    list-style-type: disc; /* Viñetas redondas */
+    margin-left: 30px; /* Indentación */
+    margin-bottom: 1.5em;
+}
+
+.content-container li {
+    margin-bottom: 12px; /* Espacio entre elementos de la lista */
+    line-height: 1.7;
+    /* Igual que P, considera la fuente */
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+
+.content-container strong {
+    color: #191c1e; /* Un color oscuro para resaltar */
+    font-weight: bold; 
+}
+
+/* Ajuste para el anclaje con header fijo */
+/* La altura (10vh) debe coincidir con la altura .header */
+html {
+scroll-padding-top: 10vh;
+}
+
+/* Asegurar que los estilos de links dentro del contenido no interfieran mucho */
+.content-container a {
+    color: #007bff; /* Un color azul estándar para enlaces */
+    text-decoration: underline;
+}
+.content-container a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+/* En esta seccion se implemnta la ediciion de las Funciones de los switches las imagenes que se usaron*/
+.galeria-switches {
+    max-width: 700px; /* Ajusta el ancho máximo de la galería */
+    margin: 2em auto; /* Centra la galería y le da espacio */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.galeria-imagen-principal {
+    position: relative; /* Para posicionar los botones de navegación */
+    margin-bottom: 15px;
+    overflow: hidden; /* Para efectos de transición */
+    border-radius: 6px;
+}
+
+.galeria-imagen-principal img {
+    display: block;
+    width: 100%;
+    height: auto; /* Mantiene la proporción */
+    max-height: 450px; /* Limita la altura máxima de la imagen principal */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 6px;
+    transition: opacity 0.3s ease-in-out; /* Para un fundido suave al cambiar imagen */
+}
+
+.galeria-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    z-index: 10;
+}
+
+.galeria-nav:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.galeria-prev {
+    left: 10px;
+}
+
+.galeria-next {
+    right: 10px;
+}
+
+.galeria-descripcion {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.galeria-descripcion h4 {
+    font-size: 1.4em;
+    color: #094c23; 
+    margin-bottom: 8px;
+}
+
+.galeria-descripcion p {
+    font-size: 0.95em;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+.galeria-miniaturas {
+    display: flex;
+    justify-content: center; /* Centra las miniaturas */
+    gap: 10px; /* Espacio entre miniaturas */
+    flex-wrap: wrap; /* Permite que las miniaturas pasen a la siguiente línea si no caben */
+}
+
+.galeria-miniaturas .miniatura {
+    width: 80px;  /* Tamaño de las miniaturas */
+    height: 60px; /* Tamaño de las miniaturas */
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.galeria-miniaturas .miniatura:hover {
+    border-color: #007bff; /* Color al pasar el ratón */
+    transform: scale(1.05);
+}
+
+.galeria-miniaturas .miniatura.activa {
+    border-color: #094c23; 
+    transform: scale(1.08);
+}
+
+
+
 /*footer*/
+
+/* En esta seccion footer se edita el Css*/
 
 .footer{
     background-color: #fafffaf0;
@@ -208,8 +452,8 @@ textos h3{
     background-color: #0e2e0a;
 }
 .logo-pie img{
-    object-fit: cover;
-    height: 150px;
+    width: 350px;
+    height: 120px;
 }
 
 .textos-pie{
@@ -246,6 +490,89 @@ textos h3{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #fafff9;
+    background-color: #0e2e0a;
 }
+
+.pieizquierdo a{
+    color: #f7fff6;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .header {
+    flex-direction: column;
+    height: auto;
+    }
+    
+    .nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .section-1, .section-2, .section-3 {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    }
+
+    .foto {
+    width: 90%;
+    margin-bottom: 20px;
+    }
+
+    .textos {
+    text-align: center;
+    }
+    
+    .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    }
+}
+
+
+/* --- Para hacer el formato mas responsiblo en el celular --- */
+
+/* Responsive para el contenido detallado (asegura que se vea bien en móviles) */
+@media (max-width: 992px) { /* Ajusta breakpoint si es necesario */
+    .content-container {
+        padding: 40px 8%; /* Menos padding lateral en pantallas medianas */
+    }
+     /* Quizás no necesites max-width en pantallas medianas */
+    .content-container p,
+    .content-container ul {
+        max-width: 100%; /* Ocupa el ancho disponible dentro del padding */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .content-container {
+        padding: 30px 5%; 
+    }
+
+    .content-container h2 {
+        font-size: 1.8em;
+        text-align: left; /* Alinear a la izquierda en móvil puede ser mejor */
+        border-bottom: none; /* Quitar borde en móvil si prefieres */
+        padding-bottom: 5px;
+    }
+
+    .content-container p,
+    .content-container li {
+        font-size: 0.95em; /* Texto más pequeño en móvil */
+        line-height: 1.7;
+        text-align: left; /* Alinear a la izquierda */
+    }
+
+    .content-container ul {
+        padding-left: 20px; /* Menos indentación para la lista */
+    }
+}
+
+
+
 
