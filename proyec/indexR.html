@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <title>Switches de Red - Guía Completa</title>
+</head>
+<body>
+
+    <!-- La implementacion de header, el cual se implemento el menu, uno para movil es el menu-toggle -->
+
+    <header class="header">
+        <div class="logo">
+            <img src="images/Logotrans.jpg" height="120" width="150" alt="LogoEmpresa">
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+        <div class="nav" id="nav">
+            <a href="#Definicion">Definicion</a>
+            <a href="#Historia">Historia</a>
+            <a href="#Funciones">Funciones</a>
+            <a href="#Características">Características</a>
+            <a href="#Beneficios">Beneficios</a>
+        </div>
+    </header>
+
+    <!-- En esta seccion se puso enlances de videos sobre el dominio del tema de switches de red en 3 secciones-->
+
+    <section class="section-1">
+        <img src="images/Fondoprincipal.png" alt="Principal">
+        <h1>Switches de Red</h1>
+        <p>Guía completa sobre tipos, funciones y configuraciones.</p>
+        <a href="https://youtu.be/nLBlmKcnk2c?si=nAv5qn-UWAhpY2Vs">Ver más</a>
+    </section>
+
+    <section class="section-2">
+        <p>Dato Curioso: Los switches aprenden automáticamente dónde está cada dispositivo en la red simplemente escuchando el tráfico. ¡Son autodidactas!</p>
+    </section>
+
+    <section class="section-3">
+        <div class="foto">
+            <div class="img">
+                <img src="images/Section1.jpg" alt="VLANs">
+            </div>
+            <div class="textos">
+                <h3>Redes Virtuales (VLAN)</h3>
+                <p>Segmenta tu red para mejorar seguridad y rendimiento con switches gestionables.</p>
+                <a href="https://youtu.be/lFE7IZdjgKU?si=TVUFTNazJ7QdOcoD">Conoce más</a>
+            </div>
+        </div>
+
+        <div class="foto">
+            <div class="img">
+                <img src="images/Section2.jpg" alt="Puertos Switch">
+            </div>
+            <div class="textos">
+                <h3>Conexión Inteligente</h3>
+                <p>Dirigen datos eficientemente usando direcciones MAC, optimizando la velocidad.</p>
+                <a href="https://youtu.be/SqwyWtPl08U?si=nkSVg8FLyEFYn6My">Conoce más</a>
+            </div>
+        </div>
+        <div class="foto">
+            <div class="img">
+                <img src="images/Section3.jpg" alt="Switch PoE">
+            </div>
+            <div class="textos">
+                <h3>Potencia y Datos (PoE)</h3>
+                <p>Alimenta dispositivos como cámaras o puntos de acceso directamente por el cable de red.</p>
+                <a href="https://youtu.be/5jVXCNFPz_0?si=Hcw9NNNgPTLxhWRs">Conoce más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- En esta parte ya seria el contenido del las secciones del menu con una pequeña descripcion y en las fotos puesta con los formatos APA -->
+
+    <section id="Definicion" class="content-section">
+        <div class="content-container">
+            <h2>¿Qué es un Switch de Red?</h2>
+            <div class="image-container float-right">
+            <p>
+                Un switch (o conmutador) es un dispositivo de interconexión que opera principalmente en la <strong>Capa 2 (Enlace de Datos)</strong> del modelo OSI. Su función principal es recibir tramas de datos de un dispositivo conectado a uno de sus puertos y reenviarlas inteligentemente solo al puerto donde está conectado el dispositivo de destino. Actúa como un centro de conexión para múltiples dispositivos (como ordenadores, impresoras, servidores, puntos de acceso Wi-Fi) dentro de una red de área local (LAN). Esto se diferencia de los antiguos hubs, que simplemente repetían la señal por todos sus puertos, generando colisiones y reduciendo la eficiencia de la red.
+            </p>
+        
+            <img src="images/Definicion.png" height="300" width="500"alt="imagen-animar-js"> 
+                <p class="caption">Adams, A. (1942). The Tetons and the Snake River [Fotografía]. The National Archives. https://www.archives.gov/research/ansel-adams</p>
+            </div>
+        </div>
+    
+        
+    </section>
+
+    <section id="Historia" class="content-section"> 
+        <div class="content-container">
+            <div class="image-container float-right">
+
+            <h2>Nacimiento de los conmutadores de red</h2>
+            
+            <p>La primera generación de conmutadores de red, conocidos como conmutadores de medios compartidos, utilizaba tecnología Ethernet. Estos conmutadores ofrecían un ancho de banda compartido, lo que permitía la comunicación simultánea de múltiples dispositivos. Sin embargo, a medida que las redes crecían, los conmutadores de medios compartidos se volvieron inadecuados debido al limitado ancho de banda disponible.</p>
+            <p>En la década de 1990, el concepto de redes LAN virtuales (VLAN) revolucionó los conmutadores de red. Las VLAN permitieron a los administradores de red segmentar una red física en múltiples redes lógicas, mejorando la seguridad, el rendimiento y la facilidad de administración. Los conmutadores compatibles con VLAN se adoptaron ampliamente, lo que permitió a las organizaciones optimizar sus arquitecturas de red.</p>
+            <p>A medida que los requisitos de red se volvieron más complejos, surgieron los conmutadores administrados para ofrecer funciones avanzadas y un mayor control sobre las configuraciones de red. Los conmutadores administrados permitieron a los administradores configurar y supervisar puertos individuales, priorizar el tráfico de red e implementar medidas de seguridad. Además, se introdujeron los conmutadores de capa 2 y capa 3, que proporcionaron capacidades de enrutamiento mejoradas y optimizaron el rendimiento de la red.</p>
+            <p>A principios de la década del 2000, se introdujo la tecnología Power over Ethernet (PoE), que permitía a los conmutadores de red suministrar energía a dispositivos conectados, como teléfonos IP, puntos de acceso inalámbricos y cámaras de seguridad. Esta innovación simplificó las implementaciones de red al eliminar la necesidad de fuentes de alimentación independientes y reducir el cableado.</p>
+            <p>En los últimos años, la aparición de las redes definidas por software (SDN) ha traído consigo un nuevo paradigma para los conmutadores de red. SDN separa el plano de control del plano de datos, lo que permite la gestión centralizada y la programabilidad de los conmutadores de red. Este enfoque ofrece mayor flexibilidad, escalabilidad y agilidad en las implementaciones de red.
+            </p>
+                <div class="image-container float-right">
+                    <img src="images/hostoria.jpg" height="300" width="500"alt="imagen-animar-js"> 
+                    <p class="caption">[Fotografía de un switch de red moderno con múltiples puertos Ethernet]. (2023). TechWebsite.com. https://www.techwebsite.com/images/modern-switch.jpg</p>
+                </div>
+            </div></section>
+            
+    <!-- En esta parte que es de las Funciones se paso como galerias de fotos y descripcion de las funciones de cada switches de red los tipos que puede encontar en el tema -->
+
+    <section id="Funciones" class="content-section"> 
+        <div class="content-container">
+        <h2>Tipos Principales de Switches</h2>
+    
+        <div class="galeria-switches">
+            <div class="galeria-imagen-principal">
+                <img src="images/switchesgestion.jpg" alt="Switch No Gestionable" id="imagenGaleria">
+                <button class="galeria-nav galeria-prev" aria-label="Imagen anterior">❮</button>
+                <button class="galeria-nav galeria-next" aria-label="Siguiente imagen">❯</button>
+            </div>
+            <div class="galeria-descripcion">
+                <h4 id="tituloGaleria">Switches No Gestionables (Unmanaged)</h4>
+                <p id="textoGaleria">
+                    Son dispositivos plug-and-play, simples y económicos. No ofrecen opciones de configuración. Ideales para redes pequeñas o domésticas donde no se necesita control avanzado.
+                </p>
+            </div>
+    
+            <!-- Fotos y miniaturas de la seccion Funciones -->
+
+            <div class="galeria-miniaturas">
+                <img src="images/switchesgestion.jpg" alt="Miniatura Switch No Gestionable" class="miniatura activa" data-imagen="images/switchesgestion.jpg" data-titulo="Switches No Gestionables (Unmanaged)" data-descripcion="Son dispositivos plug-and-play, simples y económicos. No ofrecen opciones de configuración. Ideales para redes pequeñas o domésticas donde no se necesita control avanzado.">
+                <img src="images/switcgesGest.jpg" alt="Miniatura Switch Gestionable" class="miniatura" data-imagen="images/switcgesGest.jpg" data-titulo="Switches Gestionables (Managed)" data-descripcion="Ofrecen una interfaz de configuración (web, CLI) para administrar y monitorizar la red. Soportan características avanzadas como VLANs, QoS, STP, etc. Esenciales en redes empresariales.">
+                <img src="images/switchesinteligente.jpg" alt="Miniatura Switch Inteligente" class="miniatura" data-imagen="images/switchesinteligente.jpg" data-titulo="Switches Inteligentes (Smart Switches)" data-descripcion="Un punto intermedio. Ofrecen algunas capacidades de gestión (VLANs básicas, QoS) vía interfaz web, con menos funcionalidades que un switch totalmente gestionable. Ideales para PYMES.">
+                <img src="images/switche3.jpg" alt="Miniatura Switch Capa 3" class="miniatura" data-imagen="images/switche3.jpg" data-titulo="Switches de Capa 3 (Layer 3)" data-descripcion="Además de funciones de Capa 2, pueden realizar enrutamiento básico entre diferentes VLANs o subredes, combinando funcionalidades de switch y router.">
+                <img src="images/switchepoe.jpg" alt="Miniatura Switch PoE" class="miniatura" data-imagen="images/switchepoe.jpg" data-titulo="Switches PoE (Power over Ethernet)" data-descripcion="Suministran energía eléctrica a dispositivos conectados (teléfonos IP, cámaras, APs) a través del mismo cable de red, simplificando instalaciones.">
+            </div>
+        </div>
+    </div>
+    <section id="Características" class="content-section"> 
+        <div class="content-container">
+            <h2>Características</h2>
+            <ul>
+                <li><strong>Número y Tipo de Puertos:</strong> Cantidad de conexiones (e.g., 8, 16, 24, 48 puertos). Velocidad (Fast Ethernet 10/100 Mbps, Gigabit Ethernet 10/100/1000 Mbps, Multi-Gigabit 2.5/5 Gbps, 10 Gbps+). Tipo de conector (cobre RJ45, fibra óptica SFP/SFP+/QSFP).</li>
+                <li><strong>PoE/PoE+/PoE++ (Power over Ethernet):</strong> Capacidad de suministrar energía eléctrica a dispositivos (teléfonos IP, cámaras, APs) por el cable de red. Importante verificar el presupuesto total de potencia (W) y por puerto.</li>
+                <li><strong>VLANs (Virtual LANs):</strong> Permiten segmentar lógicamente una red física en múltiples redes virtuales independientes, mejorando seguridad y organización (requiere switches gestionables o smart).</li>
+                <li><strong>QoS (Quality of Service):</strong> Permite priorizar ciertos tipos de tráfico (voz, video) sobre otros menos sensibles a la latencia (requiere switches gestionables o smart).</li>
+                <li><strong>Capacidad de Conmutación (Switching Capacity/Backplane):</strong> Ancho de banda total que el switch puede manejar internamente sin bloqueos (medido en Gbps).</li>
+                <li><strong>Tasa de Reenvío (Forwarding Rate):</strong> Velocidad a la que el switch puede procesar paquetes (medida en millones de paquetes por segundo - Mpps).</li>
+                <li><strong>Funciones de Seguridad:</strong> Port Security (limitar MACs por puerto), Listas de Control de Acceso (ACLs), inspección DHCP, protección contra tormentas de broadcast.</li>
+                <li><strong>Apilamiento (Stacking):</strong> Permite conectar varios switches físicos para que funcionen y se gestionen como una única unidad lógica (generalmente en switches gestionables de gama media/alta).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="Beneficios" class="content-section">
+        <div class="content-container">
+            <h2>Beneficios de usar Switches</h2>
+            <ul>
+                <li>Permiten comunicación full-duplex (enviar y recibir datos simultáneamente) en cada puerto.</li>
+                <li>Aumentan el ancho de banda efectivo disponible para cada dispositivo conectado.</li>
+                <li>Ofrecen (en modelos gestionables/smart) mayor control, seguridad y capacidad de segmentación (VLANs).</li>
+                <li>Facilitan la escalabilidad de la red añadiendo más switches según sea necesario.</li>
+                <li>Permiten la implementación de tecnologías avanzadas como PoE y QoS.</li>
+            </ul>
+        </div>
+    </section>
+
+                    
+    <!-- En la seccion de Footer se pone el logo de la empresa los link de los sitios de cada uno de mis compañeros y en contactanos se ingresa el instragram en este caso seria mi de la alumno Raquel Nava como simulacion de contactar a la em-->
+
+
+
+    <footer class="footer">
+        <div class="logo-pie">
+            <img src="images/LOGOVERDE.jpg" alt="logo">
+        </div>
+        <div class="textos-pie">
+            <div class="piederecho">
+                <a href="index.html">Página Principal</a> | <a href="Darwinpagina.html">Sección Router</a> | <a href="https://www.instagram.com/nr_raquel_/">Contáctanos</a>
+            </div>
+            <div class="pieizquierdo">
+                © <a href="#">Empresa de Router y Switches</a> 
+            </div>
+        </div>
+    </footer>
+    <!-- En esta seccion se implementa los script que se usaron esta pagina web-->
+
+    <script src="js/menu.js"></script>
+    <script src="js/amimacion.js"></script>
+
+</body>
+</html>
